@@ -52,6 +52,31 @@
         </defs>
       </svg>
 
+      <div class = "content">
+        <div class = "right-col">
+            <img src = "play.png" id = "icon" width="5px" height="50px">
+        </div>
+    </div>
+    <audio id = "rainSound">
+        <source src = "media/Rain on a Window Sound - 60 Minutes 'Sleep Sounds'.mp3" type = "audio/mp3">
+    </audio>
+
+    <script>
+        var rainSound = document.getElementById("rainSound");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(rainSound.paused){
+                rainSound.play();
+                icon.src = "pause.png";
+            } else{
+                rainSound.pause();
+                icon.src = "play.png";
+            }
+        }
+    </script>
+
+
         <script src = "home.js" charset = "utf-8"></script>
         <script src = "task.js" charset = "utf-8"></script>
     </body>
