@@ -1,8 +1,8 @@
 h1 {
     font-family: 'Sacramento', cursive;
     color: #ffffff;
-    padding-top: 50px;
-    font-size: 4rem;
+    padding-top: 40px;
+    font-size: 6rem;
     text-align: center;
 } 
 
@@ -19,6 +19,7 @@ body {
   background: #eb9ede;
   min-height: 100vh;
   overflow: hidden;
+  margin: 25px;
 }
 
 .container {
@@ -115,7 +116,8 @@ body {
   
   .task-item {
     margin-bottom: 10px;
-    width: 100%;
+    /* width: 100%; */
+    width: 40%;
     display: flex;
     align-items: right;
     justify-content: space-between;
@@ -163,6 +165,7 @@ body {
     background-color: transparent;
     outline: none;
     cursor: pointer;
+    width: 60%
 
   }
   
@@ -220,3 +223,20 @@ body {
     font-size: 2rem;
     margin-left: 10px;
 } 
+
+
+.music-title {
+    text-align: right;
+    margin-bottom: 40px;
+    font-size: 80px;
+    opacity: 0.5;
+    margin-left: 100 px;
+  }
+
+
+.spotify {
+    width: 350px;
+    height: auto;
+    margin-right: 25px;
+    margin-top: 450px;
+}
