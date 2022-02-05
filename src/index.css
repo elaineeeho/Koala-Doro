@@ -1,0 +1,14 @@
+body {
+    background-color: #ffffff;
+}
+
+.background-image {
+    text-align: center;
+    margin-top: 100px;
+    transition: transform 1.5s;
+}
+
+.background-image:hover {
+    transform: scale(1.2);
+}
+
