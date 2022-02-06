@@ -34,7 +34,7 @@ function progressTrack() {
         #00aa51 360deg
       )`;
     clearInterval(progress);
-    startStop.innerHTML = "START";
+    startStop.innerHTML = "START WORK";
     progress = null;
     progressStart = 0;
   }
@@ -76,7 +76,7 @@ function resetValues() {
 }
 
 startStop.onclick = function () {
-  if (startStop.innerHTML === "START") {
+  if (startStop.innerHTML === "START WORK") {
     if (!(parseInt(minutes) === 0 && parseInt(seconds) === 0)) {
       startStop.innerHTML = "STOP";
       startStopProgress();
@@ -84,7 +84,7 @@ startStop.onclick = function () {
       alert("Enter the Time Value in your Timer!");
     }
   } else {
-    startStop.innerHTML = "START";
+    startStop.innerHTML = "START WORK";
     startStopProgress();
   }
 };
@@ -108,3 +108,37 @@ minElem.onblur = function () {
 secElem.onblur = function () {
   resetValues();
 };
+
+
+//////
+var countdown;
+var countdown_number;
+var audio = new Audio('http://www.freshly-ground.com/misc/music/20060826%20-%20Armstrong.mp3');
+
+function countdown_trigger() {
+    if (countdown_number > 0) {
+        countdown_number--;
+        document.getElementById('countdown_text').innerHTML = countdown_number;
+        if (countdown_number > 0) {
+            countdown = setTimeout(countdown_trigger, 1000);
+        }
+
+        if (countdown_number === 0) {
+            audio.play()
+        }
+    }
+}
+
+function countdown_clear() {
+    clearTimeout(countdown);
+}
+
+function countdown_init() {
+    countdown_number = 11;
+    countdown_trigger();
+}
+
+document.getElementById('START BREAK').onclick = countdown_init;
+document.getElementById('STOP').onclick = countdown_clear;
+
+
