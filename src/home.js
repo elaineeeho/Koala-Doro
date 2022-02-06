@@ -34,7 +34,7 @@ function progressTrack() {
         #00aa51 360deg
       )`;
     clearInterval(progress);
-    startStop.innerHTML = "START WORK";
+    startStop.innerHTML = "START";
     progress = null;
     progressStart = 0;
   }
@@ -76,7 +76,7 @@ function resetValues() {
 }
 
 startStop.onclick = function () {
-  if (startStop.innerHTML === "START WORK") {
+  if (startStop.innerHTML === "START") {
     if (!(parseInt(minutes) === 0 && parseInt(seconds) === 0)) {
       startStop.innerHTML = "STOP";
       startStopProgress();
@@ -84,7 +84,7 @@ startStop.onclick = function () {
       alert("Enter the Time Value in your Timer!");
     }
   } else {
-    startStop.innerHTML = "START WORK";
+    startStop.innerHTML = "START";
     startStopProgress();
   }
 };
@@ -138,7 +138,7 @@ function countdown_init() {
     countdown_trigger();
 }
 
-document.getElementById('START BREAK').onclick = countdown_init;
+document.getElementById('START').onclick = countdown_init;
 document.getElementById('STOP').onclick = countdown_clear;
 
 
